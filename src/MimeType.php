@@ -3,6 +3,9 @@
 namespace Aedart\MimeTypes;
 
 use Aedart\Contracts\MimeTypes\MimeType as MimeTypeInterface;
+use Aedart\Contracts\MimeTypes\Sampler;
+use Aedart\Utils\Arr;
+use Throwable;
 
 /**
  * Mime-Type
@@ -14,6 +17,7 @@ use Aedart\Contracts\MimeTypes\MimeType as MimeTypeInterface;
  */
 class MimeType implements MimeTypeInterface
 {
+
     /**
      * Creates a new Mime-Type instance
      *
@@ -29,8 +33,8 @@ class MimeType implements MimeTypeInterface
         protected string|null $encoding = null,
         protected string|null $mime = null,
         protected array $extensions = []
-    ) {
-    }
+    )
+    {}
 
     /**
      * @inheritDoc
